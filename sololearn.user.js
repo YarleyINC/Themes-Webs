@@ -16,6 +16,7 @@
      GM_addStyle('div.le-quiz-feedback__text, div.sl-complete-celebration__title { color: #FFFFFF; }');
      GM_addStyle('span.sl-rearrange-answer-item__text  { color: #000000; }');
      //GM_addStyle('span.le-lesson-header__lesson-title { color: #850000; }');
+
  
  /*
      const jtBody = document.querySelector('body');
