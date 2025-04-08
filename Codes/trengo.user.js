@@ -39,49 +39,23 @@
     GM_addStyle('div.assign.dark-light.rounded-lg.px-8.text-center.align-middle { position: relative; }');
     //buscar codigo para eliminar
     //<div data-v-688aab3c="" style="height: 148px;"></div>
-    ////SOLUCION////
-    /*
-    // Selecciona todas las etiquetas <div> con el atributo específico
     const elements = document.querySelectorAll('div[data-v-688aab3c]');
-
-    // Recorre los elementos encontrados y elimínalos del DOM
+    // Recorre los elementos encontrados y verifica el estilo
     elements.forEach(element => {
-        element.remove();
+        if (element.style.height === '148px') {
+            element.remove();
+        }
     });
-    */
-
 
     //buscar para eliminar la propiedad style "color: inherit;"
     //<a data-hj-suppress="" class="open-external" href="8fep4hfxir-28780.pdf" target="_blank" style="color: inherit; text-decoration: none;">28780.pdf <!--v-if--></a>
-    ////SOLUCIONES////
-    /* 
-    1.Para cambiar el color de la propiedad style "color: inherit;"
-    // Selecciona el elemento específico usando un selector adecuado
+    //Para cambiar el color de la propiedad style "color: inherit;"
     const element = document.querySelector('a[data-hj-suppress][class="open-external"]');
-
     // Verifica si el elemento existe antes de aplicar cambios
     if (element) {
         // Reasigna un nuevo color
-        element.style.color = 'blue'; // Puedes cambiar 'blue' por cualquier otro color, como 'red', '#123456', etc.
-        console.log('Estilo reasignado: color azul');
-    } else {
-        console.log('Elemento no encontrado.');
+        element.style.color = '#8e3434'; // Puedes cambiar 'blue' por cualquier otro color, como 'red', '#123456', etc.
     }
-
-
-    2. para eliminar propiedad
-    // Selecciona el elemento específico usando un selector adecuado
-    const element = document.querySelector('a[data-hj-suppress][class="open-external"]');
-
-    // Verifica si el elemento existe antes de aplicar cambios
-    if (element) {
-        // Remueve la propiedad de estilo específica
-        element.style.removeProperty('color');
-        console.log('Estilo eliminado: color');
-    } else {
-        console.log('Elemento no encontrado.');
-    }
-    */
 
     // Your code here...
 })();
