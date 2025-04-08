@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Theme Dark | Trengo
-// @namespace    http://tampermonkey.net/
 // @version      2025-04-03
-// @description  try to take over the world!
+// @description  Trengo Dark Mode Theme
 // @author       @YarleyINC
 // @match        https://app.trengo.com/*
 // @icon         https://assets.trengo.com/release/img/fav/favicon512x512.png
+// @require      https://github.com/YarleyINC/Themes-Webs/raw/refs/heads/main/Codes/trengo.user.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
