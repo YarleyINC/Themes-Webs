@@ -29,11 +29,11 @@
 
     ////PARA LAS FUENTES////
     //Color Fuente Verde (Para nombre de archivos)
-    GM_addStyle('a.open-external { color: #8e3434; }');
+    GM_addStyle('a[data-hj-suppress].open-external { color: #8e3434; }');
     //Color Fuente Blanco (Para espacios donde el texto No se encuentra focus o asi lo requiera el espacio)
     GM_addStyle('div.flex.flex-shrink-0.flex-nowrap.items-center.text-sm.leading-none.text-grey-600, span.flex-1.text-ellipsis, span.text-ellipsis, h4.t-text-sm-emphasize.m-0.p-0.text-grey-700, leable.mb-0.ml-auto.text-xs, p.t-text-sm.my-0.ml-6.text-ellipsis.p-0.pr-2.text-grey-700, p.t-text-sm-emphasize.m-0.mr-2.p-0.text-grey-700, p.t-text-sm-emphasize.m-0.p-0.text-grey-700, p.t-text-sm.m-0.ml-1.mt-1.p-0.text-grey-700 { color: #FFFFFF; }');
     //Color Fuente Negro (Para espacios donde el texto esta focus)
-    GM_addStyle('div.relative.rounded-lg.text-left.bg-white.pl-12.border-grey-200.b-2x.py-4.px-4.leading-normal.inline, div.mb-1, div.list-item.min-w-0.cursor-pointer.select-none.overflow-hidden.active, span.max-w-100.ml-2.text-ellipsis.whitespace-nowrap.text-grey-600, div.cursor-pointer.p-4, div.e.is-inbound-mail.email-body.p-4, span.mr-1.cursor-pointer.text-ellipsis.rounded-lg.bg-grey-200.leading-none.text-grey-600, div.e.email-body.p-4 { color: #000000; }');
+    GM_addStyle('div.fr-element.fr-view,div.relative.rounded-lg.text-left.bg-white.pl-12.border-grey-200.b-2x.py-4.px-4.leading-normal.inline, div.mb-1, div.list-item.min-w-0.cursor-pointer.select-none.overflow-hidden.active, span.max-w-100.ml-2.text-ellipsis.whitespace-nowrap.text-grey-600, div.cursor-pointer.p-4, div.e.is-inbound-mail.email-body.p-4, span.mr-1.cursor-pointer.text-ellipsis.rounded-lg.bg-grey-200.leading-none.text-grey-600, div.e.email-body.p-4 { color: #000000; }');
     //Color Fuente Gris (Para cuadros de texto con fondo blanco)
     GM_addStyle('input.w-12.rounded-md.border.border-grey-300.border-opacity-30.px-2.py-1.transition-colors,textarea.w-full.rounded-md.border-2.border-grey-300.border-opacity-30.px-2.py-1.transition-colors { color: #707070; }');
 
@@ -47,19 +47,19 @@
     // Recorre los elementos encontrados y verifica el estilo
     elements.forEach(element => {
         if (element.style.height === '148px') {
-            element.remove();
+            element.style.height = '0px';
         }
     });
 
     //buscar para eliminar la propiedad style "color: inherit;"
     //<a data-hj-suppress="" class="open-external" href="8fep4hfxir-28780.pdf" target="_blank" style="color: inherit; text-decoration: none;">28780.pdf <!--v-if--></a>
     //Para cambiar el color de la propiedad style "color: inherit;"
-    const element = document.querySelector('a[data-hj-suppress][class="open-external"]');
+    //const element = document.querySelector('a[data-hj-suppress].open-external');
     // Verifica si el elemento existe antes de aplicar cambios
-    if (element) {
+    //if (element) {
         // Reasigna un nuevo color
-        element.style.color = '#8e3434'; // Puedes cambiar 'blue' por cualquier otro color, como 'red', '#123456', etc.
-    }
+        //element.style.color = '#8e3434'; // Puedes cambiar 'blue' por cualquier otro color, como 'red', '#123456', etc.
+    //}
 
     // Your code here...
 })();
