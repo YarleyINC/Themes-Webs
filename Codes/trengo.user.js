@@ -23,7 +23,7 @@
     //Color Fondo Verde Claro y Color Fuente Negro
     GM_addStyle('div.mt-auto.h-full.rounded-b-md.bg-sun-100.p-4, #privateComposer { background-color: #a1ffac; color: #000000; }');
     //color de fondo #252525 y color fuente blanco #FFFFFF
-    GM_addStyle('div.pos-relative.h-full.flex-wrap.rounded-b-xl.bg-white.pt-1, div.pos-relative.h-full.flex-wrap.rounded-b-xl.bg-white.pt-1, div.[data-v-e53fab36].comment-composer__tab.tab-public-reply.comment-composer__selected-tab.cursor-pointer, div[data-v-45a9c69a].composer-container.pos-relative.flex.h-full.min-w-0.flex-col.bg-white { background-color: #252525; color: #FFFFFF; }');
+    GM_addStyle('div.pos-relative.h-full.flex-wrap.rounded-b-xl.bg-white.pt-1, div[data-v-688aab3c].pos-relative.flex-wrap, div.[data-v-e53fab36].comment-composer__tab.tab-public-reply.comment-composer__selected-tab.cursor-pointer, div[data-v-45a9c69a].composer-container.pos-relative.flex.h-full.min-w-0.flex-col.bg-white { background-color: #252525; color: #FFFFFF; }');
     //color de fondo #000000 y tal vez color fuente Negro #000000
     GM_addStyle('div[data-v-e53fab36].comment-composer__tabs-wrapper { background-color: #000000; color: #FFFFFF; }');
 
