@@ -29,7 +29,7 @@
 
     ////PARA LAS FUENTES////
     //Color Fuente Verde (Para nombre de archivos)
-    GM_addStyle('a[data-hj-suppress].open-external { color: #8e3434; }');
+    //GM_addStyle('a[data-hj-suppress].open-external { color: #8e3434; }');
     //Color Fuente Blanco (Para espacios donde el texto No se encuentra focus o asi lo requiera el espacio)
     GM_addStyle('div.flex.flex-shrink-0.flex-nowrap.items-center.text-sm.leading-none.text-grey-600, span.flex-1.text-ellipsis, span.text-ellipsis, h4.t-text-sm-emphasize.m-0.p-0.text-grey-700, leable.mb-0.ml-auto.text-xs, p.t-text-sm.my-0.ml-6.text-ellipsis.p-0.pr-2.text-grey-700, p.t-text-sm-emphasize.m-0.mr-2.p-0.text-grey-700, p.t-text-sm-emphasize.m-0.p-0.text-grey-700, p.t-text-sm.m-0.ml-1.mt-1.p-0.text-grey-700 { color: #FFFFFF; }');
     //Color Fuente Negro (Para espacios donde el texto esta focus)
@@ -41,25 +41,32 @@
     //
     GM_addStyle('div.comment-composer__tab.tab-note.comment-composer__selected-tab.cursor-pointer, div.comment-composer__tab.tab-public-reply.comment-composer__selected-tab.cursor-pointer, div.pos-relative.flex-wrap { position: static; }');
     GM_addStyle('div.assign.dark-light.rounded-lg.px-8.text-center.align-middle { position: relative; }');
-    //buscar codigo para eliminar
-    //<div data-v-688aab3c="" style="height: 148px;"></div>
-    const elements = document.querySelectorAll('div[data-v-688aab3c]');
-    // Recorre los elementos encontrados y verifica el estilo
-    elements.forEach(element => {
-        if (element.style.height === '148px') {
-            element.style.height = '0px';
-        }
-    });
 
     //buscar para eliminar la propiedad style "color: inherit;"
-    //<a data-hj-suppress="" class="open-external" href="8fep4hfxir-28780.pdf" target="_blank" style="color: inherit; text-decoration: none;">28780.pdf <!--v-if--></a>
-    //Para cambiar el color de la propiedad style "color: inherit;"
-    //const element = document.querySelector('a[data-hj-suppress].open-external');
-    // Verifica si el elemento existe antes de aplicar cambios
-    //if (element) {
-        // Reasigna un nuevo color
-        //element.style.color = '#8e3434'; // Puedes cambiar 'blue' por cualquier otro color, como 'red', '#123456', etc.
-    //}
+    function executeCode() {
+        // Selecciona el elemento <a> y elimina el estilo "color: inherit;"
+        const anchorElement = document.querySelector('a[data-hj-suppress].open-external');
+        if (anchorElement) {
+            anchorElement.style.color = '#911111'; // Elimina el estilo
+        }
+    //buscar codigo para eliminar
+    //<div data-v-688aab3c="" style="height: 148px;"></div>
+        const elementsDrop = document.querySelectorAll('div[data-v-688aab3c]');
+        // Recorre los elementos encontrados y verifica el estilo
+        elementsDrop.forEach(element => {
+            if (element.style.height === '148px') {
+                element.style.height = '0px';
+            }
+        });
+    }
+    
+    // Añade un event listener para el cambio de tamaño de la ventana
+    window.addEventListener('resize', () => {
+        executeCode();
+    });
+    
+    // Opcional: Ejecutar también el código al cargar la página
+    executeCode();
 
     // Your code here...
 })();
