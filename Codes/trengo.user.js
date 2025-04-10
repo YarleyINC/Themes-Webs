@@ -22,6 +22,10 @@
     GM_addStyle('div.comment-composer__tab.tab-note.comment-composer__selected-tab.cursor-pointer { background-color: #a1ffac; color: #000000; }');
     //Color Fondo Verde Claro y Color Fuente Negro
     GM_addStyle('div.mt-auto.h-full.rounded-b-md.bg-sun-100.p-4, #privateComposer { background-color: #a1ffac; color: #000000; }');
+    //color de fondo #252525 y color fuente blanco #FFFFFF
+    GM_addStyle('div.composer-container.pos-relative.flex.h-full.min-w-0.flex-col.bg-white { background-color: #252525; color: #FFFFFF; }');
+    //color de fondo #000000 y tal vez color fuente Negro #000000
+    GM_addStyle('div.comment-composer__tabs-wrapper { background-color: #000000; color: #FFFFFF; }');
 
     ////PARA LAS FUENTES////
     //Color Fuente Verde (Para nombre de archivos)
